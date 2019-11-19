@@ -192,15 +192,15 @@
     //Capture form inputs
     $("#submit").on("click", function(){
         //Validate form
-        function validateForm() {
-            var isValid = true;
-            $(".form-control").each(function() {
-                if ($(this).val() === '')
-                isValid=false;
-            });
-            return isValid;
-        }
-        if (validateForm == true) {
+        // function validateForm() {
+        //     var isValid = true;
+        //     $(".form-control").each(function() {
+        //         if ($(this).val() === '')
+        //         isValid=false;
+        //     });
+        //     return isValid;
+        // }
+        // if (validateForm === true) {
             var userData = {
                 name: $("#name").val(),
                 photo: $("#photo").val(),
@@ -216,12 +216,12 @@
 
                 $("#friendModal").modal('show');
             });
-        }
-        else {
-            alert("Please fill out all of the survey before submitting");
-        }
+        // }
+        // else {
+        //     alert("Please fill out all of the survey before submitting");
+        // }
 
-        return false;
+        // return false;
 
     });
     
