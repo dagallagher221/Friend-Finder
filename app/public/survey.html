@@ -161,25 +161,7 @@
             </div>
         </div>
     </div>
-    <div class="modal fade" id="friendModal" role="dialog">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                    <h1 class="modal-title">Best Match</h1>
-                </div>
-                <div class="modal-body">
-                    <h2 id="matchName"></h2>
-                    <img id="matchImg" src="" alt="">
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
+
     <footer>
         <div class="container">
             <p>
@@ -191,16 +173,7 @@
     <script type="text/javascript">
     //Capture form inputs
     $("#submit").on("click", function(){
-        //Validate form
-        // function validateForm() {
-        //     var isValid = true;
-        //     $(".form-control").each(function() {
-        //         if ($(this).val() === '')
-        //         isValid=false;
-        //     });
-        //     return isValid;
-        // }
-        // if (validateForm === true) {
+       
             var userData = {
                 name: $("#name").val(),
                 photo: $("#photo").val(),
@@ -214,14 +187,9 @@
                 $("#matchName").text(data.name);
                 $("#matchImg").attr("src", data.photo);
 
-                $("#friendModal").modal('show');
+                
             });
-        // }
-        // else {
-        //     alert("Please fill out all of the survey before submitting");
-        // }
-
-        // return false;
+       
 
     });
     
